@@ -1,0 +1,21 @@
+<mat-sidenav-container class="full-height">
+  <mat-sidenav #sidenav>
+      <mat-nav-list>
+          <a mat-list-item routerLink="/courses" routerLinkActive="mat-list-item-focus" (click)="close()">
+            <mat-icon mat-list-icon>school</mat-icon>
+            <h4 mat-line>Cursussen</h4>
+          </a>
+          <a mat-list-item routerLink="/course-instances" routerLinkActive="mat-list-item-focus" (click)="close()">
+            <mat-icon mat-list-icon>event</mat-icon>
+            <h4 mat-line>Geplance cursussen</h4>
+          </a>
+          <a mat-list-item routerLink="/course-instances/import" routerLinkActive="mat-list-item-focus" (click)="close()">
+            <mat-icon mat-list-icon>import_export</mat-icon>
+            <h4 mat-line>Cursussen importeren</h4>
+          </a>
+      </mat-nav-list>
+  </mat-sidenav>
+  <div class="full-height mat-typography">
+    <ng-content select="*"></ng-content>
+  </div>
+</mat-sidenav-container>
